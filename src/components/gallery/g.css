@@ -1,0 +1,50 @@
+.gallery_title {
+  font-family: "tokyo";
+  font-weight: 700;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+  z-index: 10;
+  position: relative;
+}
+
+.gallery_container {
+  padding: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.gallery_image {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  object-position: center center;
+}
+.doha {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+.se {
+  display: none;
+  padding: 15px 40px;
+}
+@media (min-width: 1480px) {
+  .gallery_container {
+    max-width: 1600px;
+  }
+}
+@media (max-width: 1180px) {
+  .gallery_image {
+    height: 60vh;
+    object-position: center 20%;
+  }
+
+  .gallery_container {
+    padding:50px 20px;
+    max-width: max-content;
+  }
+
+  .gallery_title{
+    font-size: 40px;
+  }
+}

@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "tokyo";
+  src: url("../public/fonts/TokyoDreams.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "eb";
+  src: url("../public/fonts/Lato-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "sans";
+  src: url("../public/fonts/WorkSans-VariableFont_wght.ttf") format("truetype");
+}
+
+.oo {
+  font-family: "sans";
+}
+
+.sha {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.io {
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.yt {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ss {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #3333334e;
+  padding: 5px 10px;
+}
+@import "tailwindcss";
+:root {
+  --black: #1f1a19;
+}
+.fo {
+  background-color: var(--black);
+  padding: 10px;
+  text-align: center;
+  font-family: "tokyo";
+  letter-spacing: 1.2px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 800;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}

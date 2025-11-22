@@ -1,0 +1,158 @@
+.detail_container {
+  max-width: 1000px;
+  overflow: hidden;
+  margin: 10px auto;
+  padding: 80px 0;
+}
+
+.detail_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.detail_img,
+.de_img {
+  width: 100%;
+}
+.tt {
+  margin-top: -500px;
+}
+.de_img {
+  height: 100%;
+  /* border-top-left-radius: 50%; */
+  /* border-top-right-radius: 50%; */
+  object-fit: cover;
+  object-position: center center;
+}
+
+.detail_img {
+  width: 100%;
+  height: 80vh;
+  margin: 10px 0;
+  object-fit: cover;
+  object-position: center center;
+  padding: 4px;
+  /* border: 1px solid #33333384; */
+}
+
+.detail_sub {
+  display: flex;
+  overflow: hidden;
+  /* min-height: 100vh; */
+  /* transform: rotate(-1deg); */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wedding_main_tite {
+  font-family: "tokyo";
+  font-size: 35px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.place_name {
+  font-family: "eb";
+  font-size: 17px;
+  margin: 10px 0;
+  text-align: center;
+  color: var(--black);
+  opacity: 90%;
+}
+
+.time {
+  font-family: "tokyo";
+  font-size: 50px;
+  text-align: center;
+}
+
+.link {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #33333384;
+  gap: 10px;
+  margin: 20px 0;
+  color: var(--black);
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+  font-weight: 700;
+  font-family: "tokyo";
+}
+.mySwiper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* height: 100vh; */
+}
+
+.swiper_img {
+  padding: 10px;
+  height: 50vh;
+  /* border: 1px solid #33333384; */
+  width: 100%;
+}
+@media (min-width: 1480px) {
+  .detail_container {
+    max-width: 1400px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .tt {
+    margin-top: 50px;
+  }
+
+  .tto {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 40px;
+  }
+
+  .tt {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .detail_img {
+   
+   width: 100%;
+    height: 50vh;
+  }
+
+  .tto {
+    display: grid;
+    grid-template-columns: 65fr 1fr;
+    gap: 40px;
+  }
+
+  .tt {
+    display: grid;
+    grid-template-columns: 1fr 65fr;
+    gap: 40px;
+  }
+.rrr{
+  margin-bottom: 60px;
+}
+  .wedding_main_tite {
+    font-size: 30px;
+  }
+  .detail_container {
+    padding: 30px 0px;
+  }
+  .time {
+    font-size: 40px;
+  }
+
+  .link {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,123 @@
+.nav_container {
+  position: absolute;
+  z-index: 100;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  right: 0;
+  left: 0;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.last {
+  padding: 15px 30px;
+  border: 1px solid #fff;
+  background-color: #3333332f;
+}
+.nav_ul {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav_li {
+  cursor: pointer;
+  display: flex;
+  gap: 5px;
+  color: #fff;
+  font-family: "tokyo";
+  font-size: 16px;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hide desktop nav in mobile */
+@media (max-width: 768px) {
+  .desktop_nav {
+    display: none;
+  }
+  
+  .mobile_menu_icon{
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    display: flex!important;
+  }
+  .mobile_menu_icon {
+    /* display: block; */
+    z-index: 200;
+  }
+}
+
+/* Hide menu icon on desktop */
+@media (min-width: 769px) {
+  .mobile_menu_icon {
+    display: none;
+  }
+}
+
+/* Overlay */
+.mobile_overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  z-index: 150;
+}
+
+/* Mobile Drawer */
+.mobile_drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 70%;
+  background: rgba(30, 30, 30, 0.95);
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+  padding: 30px 20px;
+  z-index: 200;
+}
+
+.mobile_drawer.open {
+  right: 0;
+}
+
+.mobile_drawer_header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 40px;
+}
+
+.mobile_nav_ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 0;
+}
+
+.mobile_nav_ul li {
+  color: #fff;
+  font-family: "tokyo";
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* RSVP button in mobile */
+.mobile_last {
+  border: 1px solid #fff;
+  padding: 12px 20px;
+  background-color: #3333332f;
+  margin-top: 10px;
+  width: fit-content;
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Accommodations at Quinta Malaposta",
+  "subtitle": "A Warm Stay for Our Traveling Guests",
+  "description": "We offer limited rooms at Quinta Malaposta for guests traveling from abroad. Please fill the form to request accommodation.",
+  "fullName": "Full Name (Main Guest)",
+  "country": "Country Traveling From",
+  "countryPlaceholder": "Select a country",
+  "specialRequests": "Special Requests / Notes",
+  "specialRequestsPlaceholder": "Accessibility needs, notes?",
+  "email": "Email Address",
+  "emailPlaceholder": "Your email to receive approval",
+  "submitBtn": "Request Accommodation",
+  "submittingBtn": "Submitting...",
+  "formNote": "After submitting, we will review your request and send an approval email.",
+  "nearHotels": "Nearby Hotels",
+  "hotelWebsite": "Website Link"
+}

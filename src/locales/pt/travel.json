@@ -1,0 +1,17 @@
+{
+  "title": "Acomodações na Quinta Malaposta",
+  "subtitle": "Uma Estadia Aconchegante para Nossos Convidados Viajantes",
+  "description": "Oferecemos quartos limitados na Quinta Malaposta para convidados que viajam do exterior. Por favor, preencha o formulário para solicitar acomodação.",
+  "fullName": "Nome Completo (Hóspede Principal)",
+  "country": "País de Origem",
+  "countryPlaceholder": "Selecione um país",
+  "specialRequests": "Pedidos / Observações Especiais",
+  "specialRequestsPlaceholder": "Necessidades de acessibilidade, observações?",
+  "email": "Endereço de Email",
+  "emailPlaceholder": "Seu email para receber aprovação",
+  "submitBtn": "Solicitar Acomodação",
+  "submittingBtn": "Enviando...",
+  "formNote": "Após o envio, revisaremos sua solicitação e enviaremos um email de aprovação.",
+  "nearHotels": "Hotéis Próximos",
+  "hotelWebsite": "Link do Site"
+}

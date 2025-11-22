@@ -1,0 +1,15 @@
+{
+  "church": {
+    "day":"Nosso Dia Especial",
+    "title": "Igreja",
+    "ceremony": "Cerimônia",
+    "placeName": "Igreja Divino Salvador de Gandra",
+    "time": "13:00",
+    "locationLink": "Link da Localização"
+  },
+  "reception": {
+    "title": "Recepção",
+    "placeName": "Quinta Malaposta",
+    "locationLink": "Link da Localização"
+  }
+}
