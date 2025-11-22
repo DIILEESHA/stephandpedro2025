@@ -56,7 +56,9 @@ const Header = () => {
           </motion.div>
 
           <motion.h2 className="couple_name" variants={fadeUp}>
-            stepahanie & pedro
+            
+            stephanie
+             & pedro
           </motion.h2>
 
           <motion.h3 className="wedding_date" variants={fadeUp}>

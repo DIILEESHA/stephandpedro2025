@@ -15,7 +15,7 @@ const App = () => {
         </Routes>
 
         <div className="footer">
-          <h2 className="fo">stepahanie & pedro</h2>
+          <h2 className="fo">stephanie & pedro</h2>
         </div>
       </div>
     </Router>
