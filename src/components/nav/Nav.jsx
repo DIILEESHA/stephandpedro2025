@@ -88,25 +88,30 @@ const Nav = () => {
             Gallery
           </li>
           <li className="nav_li last" onClick={() => scrollToSection("rsvp")}>
-            RSVP <MoveRight color="#fff" />
+            <a
+              style={{ textDecoration: "none", color: "inherit" }}
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfPsXdY5mb40sHleLMY1yFHMWcAUiX9WZvHjEOejlKnpxDznw/viewform?usp=sharing&ouid=107355289206639223256"
+            >
+              RSVP <MoveRight color="#fff" />
+            </a>
           </li>
 
           {/* Language Dropdown */}
         </ul>
-          {/* Mobile menu icon */}
-          <div className="mobile_menu_icon" >
-            <div>
-              <Menu size={30} color="#fff" onClick={toggleMenu} />
-            </div>
-
-            <div>
-              <Dropdown overlay={languageMenu} placement="bottomLeft" arrow>
-                <span style={{ cursor: "pointer", color: "#fff" }}>
-                  {i18n.language.toUpperCase()} <DownOutlined />
-                </span>
-              </Dropdown>
-            </div>
+        {/* Mobile menu icon */}
+        <div className="mobile_menu_icon">
+          <div>
+            <Menu size={30} color="#fff" onClick={toggleMenu} />
           </div>
+
+          <div>
+            <Dropdown overlay={languageMenu} placement="bottomLeft" arrow>
+              <span style={{ cursor: "pointer", color: "#fff" }}>
+                {i18n.language.toUpperCase()} <DownOutlined />
+              </span>
+            </Dropdown>
+          </div>
+        </div>
       </div>
 
       {/* Overlay */}
@@ -144,7 +149,12 @@ const Nav = () => {
               scrollToSection("rsvp");
             }}
           >
-            RSVP <MoveRight color="#fff" />
+            <a
+              style={{ color: "inherit", textDecoration: "none" }}
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfPsXdY5mb40sHleLMY1yFHMWcAUiX9WZvHjEOejlKnpxDznw/viewform?usp=sharing&ouid=107355289206639223256"
+            >
+              RSVP <MoveRight color="#fff" />
+            </a>
           </li>
 
           {/* Language Dropdown Mobile */}
