@@ -87,14 +87,14 @@ const Nav = () => {
           <li className="nav_li" onClick={gala}>
             Gallery
           </li>
-            <a
-              style={{ textDecoration: "none", color: "inherit" }}
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfPsXdY5mb40sHleLMY1yFHMWcAUiX9WZvHjEOejlKnpxDznw/viewform?usp=sharing&ouid=107355289206639223256"
-            >
-          <li className="nav_li last" onClick={() => scrollToSection("rsvp")}>
+          <a
+            style={{ textDecoration: "none", color: "inherit" }}
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfPsXdY5mb40sHleLMY1yFHMWcAUiX9WZvHjEOejlKnpxDznw/viewform?usp=sharing&ouid=107355289206639223256"
+          >
+            <li className="nav_li last" onClick={() => scrollToSection("rsvp")}>
               RSVP <MoveRight color="#fff" />
-          </li>
-            </a>
+            </li>
+          </a>
 
           {/* Language Dropdown */}
         </ul>
@@ -146,16 +146,16 @@ const Nav = () => {
             style={{ color: "inherit", textDecoration: "none" }}
             href="https://docs.google.com/forms/d/e/1FAIpQLSfPsXdY5mb40sHleLMY1yFHMWcAUiX9WZvHjEOejlKnpxDznw/viewform?usp=sharing&ouid=107355289206639223256"
           >
-          <li
-            className="mobile_last"
-            onClick={() => {
-              closeMenu();
-              scrollToSection("rsvp");
-            }}
-          >
+            <li
+              className="mobile_last"
+              onClick={() => {
+                closeMenu();
+                scrollToSection("rsvp");
+              }}
+            >
               RSVP <MoveRight color="#fff" />
-          </li>
-            </a>
+            </li>
+          </a>
 
           {/* Language Dropdown Mobile */}
         </ul>

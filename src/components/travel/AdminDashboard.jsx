@@ -24,7 +24,7 @@ import { db } from "./firebase";
 import emailjs from "@emailjs/browser";
 
 const { Option } = Select;
-const DUMMY_PASSWORD = "admin123";
+const DUMMY_PASSWORD = "sp26";
 const STORAGE_KEY = "admin_password";
 
 const statusColors = {
