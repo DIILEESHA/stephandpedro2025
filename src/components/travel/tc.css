@@ -37,11 +37,14 @@
 }
 
 .travel_title {
-  font-family: "tokyo";
+  text-shadow: 1px 3px  #97a2a5;
+
+  font-family: "bic";
   line-height: 150%;
   text-align: center;
-  font-weight: 700;
-  font-size: 50px;
+  font-weight: 500;
+  font-size: 80px;
+  line-height: 100%;
   /* width: 50%; */
   color: #fff;
   margin-bottom: 30px;
@@ -138,10 +141,12 @@
 }
 .near_title {
   text-align: center;
-  font-family: "tokyo";
-  font-size: 40px;
+  font-family: "bic";
+  font-size: 100px;
+  text-shadow: 1px 3px  #97a2a5;
+
   color: var(--black);
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 30px;
 }
 

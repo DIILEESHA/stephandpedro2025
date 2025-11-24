@@ -3,7 +3,7 @@
   text-align: center;
   font-size: 100px;
   width: 50%;
-  text-shadow: 1px 3px  #97a2a5;
+  text-shadow: 1px 3px #97a2a5;
   /* font-weight: 700; */
   line-height: 100%;
   margin: 10px auto;
@@ -53,6 +53,12 @@
   margin: 0 auto;
 }
 
+.ocation_addres {
+  font-family: "sans";
+  font-size: 16px;
+  line-height: 150%;
+}
+
 .linka {
   width: 50%;
   margin: 0px 0;
@@ -82,8 +88,7 @@
   margin-bottom: 40px;
 }
 
-
-.link{
+.link {
   /* width: 100%!important; */
 }
 

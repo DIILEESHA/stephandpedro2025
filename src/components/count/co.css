@@ -31,6 +31,8 @@
   flex-direction: column;
 }
 .main_title {
+  text-shadow: 1px 3px  #97a2a5;
+
   font-family: "bic";
   color: #fff;
   font-size: 100px;

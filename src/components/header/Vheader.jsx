@@ -106,6 +106,7 @@ const Header = () => {
           </div>
         </div>
       )}
+<div className="fff">
 
       <motion.div className="couple_name_section">
         <motion.h2
@@ -128,6 +129,7 @@ const Header = () => {
           pedro
         </motion.h2>
       </motion.div>
+</div>
 
       <motion.div className="bottom_section">
         <motion.div className="bottom_date">
@@ -166,7 +168,7 @@ const Header = () => {
           variants={textVariant}
           transition={{ delay: 1.2 }}
         >
-    They joyfully announce their wedding
+          They joyfully announce their wedding
         </motion.p>
       </motion.div>
     </div>
