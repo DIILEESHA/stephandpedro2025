@@ -6,11 +6,13 @@ import "./n.css";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-
+import usaflag from "../../assets/usa.png";
+import ptflag from "../../assets/pt.png";
 const Nav = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { i18n } = useTranslation();
+  const [currentLang, setCurrentLang] = useState(i18n.language);
 
   const [open, setOpen] = useState(false);
 
@@ -69,13 +71,6 @@ const Nav = () => {
         {/* Desktop Nav */}
         <ul className="nav_ul desktop_nav">
           <li className="nav_li">
-            <Dropdown overlay={languageMenu} placement="" arrow>
-              <span style={{ cursor: "pointer" }}>
-                {i18n.language.toUpperCase()} <DownOutlined />
-              </span>
-            </Dropdown>
-          </li>
-          <li className="nav_li">
             <a href="/">Home</a>
           </li>
           <li className="nav_li" onClick={handleDetailsClick}>
@@ -86,6 +81,32 @@ const Nav = () => {
           </li>
           <li className="nav_li" onClick={gala}>
             Gallery
+          </li>
+
+          <li className="nav_li lang_flags">
+            <img
+              src={usaflag}
+              alt="English"
+              className={`lang_flag ${
+                currentLang === "en" ? "active_flag" : ""
+              }`}
+              onClick={() => {
+                i18n.changeLanguage("en");
+                setCurrentLang("en");
+              }}
+            />
+
+            <img
+              src={ptflag}
+              alt="Portuguese"
+              className={`lang_flag ${
+                currentLang === "pt" ? "active_flag" : ""
+              }`}
+              onClick={() => {
+                i18n.changeLanguage("pt");
+                setCurrentLang("pt");
+              }}
+            />
           </li>
           {/* <a
             style={{ textDecoration: "none", color: "inherit" }}
@@ -104,12 +125,30 @@ const Nav = () => {
             <Menu size={30} color="#fff" onClick={toggleMenu} />
           </div>
 
-          <div>
-            <Dropdown overlay={languageMenu} placement="bottomLeft" arrow>
-              <span style={{ cursor: "pointer", color: "#fff" }}>
-                {i18n.language.toUpperCase()} <DownOutlined />
-              </span>
-            </Dropdown>
+          <div className="mobile_flag_wrap">
+            <img
+              src={usaflag}
+              alt="English"
+              className={`lang_flag ${
+                currentLang === "en" ? "active_flag" : ""
+              }`}
+              onClick={() => {
+                i18n.changeLanguage("en");
+                setCurrentLang("en");
+              }}
+            />
+
+            <img
+              src={ptflag}
+              alt="Portuguese"
+              className={`lang_flag ${
+                currentLang === "pt" ? "active_flag" : ""
+              }`}
+              onClick={() => {
+                i18n.changeLanguage("pt");
+                setCurrentLang("pt");
+              }}
+            />
           </div>
         </div>
       </div>

@@ -23,6 +23,34 @@
   align-items: center;
   justify-content: space-between;
 }
+.lang_flags {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lang_flag {
+  width: 28px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.lang_flag.active_flag {
+  opacity: 1;
+  transform: scale(1.1);
+  border: 2px solid #fff;
+}
+
+.mobile_flag_wrap {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
 
 .nav_li {
   cursor: pointer;
@@ -120,4 +148,12 @@
   background-color: #3333332f;
   margin-top: 10px;
   width: fit-content;
+}
+@media (max-width: 769px) {
+
+  .nav_container{
+    padding: 20px;
+  }
+
+
 }
