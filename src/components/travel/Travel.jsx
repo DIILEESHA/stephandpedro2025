@@ -147,7 +147,11 @@ const Travel = () => {
                   />
                 </div>
                 <div className="so">
-                  <button type="submit" disabled={loading} className="linkaa hoho">
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="linkaa hoho"
+                  >
                     {loading ? t("submittingBtn") : t("submitBtn")}
                   </button>
                 </div>

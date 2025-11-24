@@ -71,14 +71,16 @@ const Nav = () => {
       <div className="nav_container">
         <div className="all desktop_nav">
           <div className="logo">
-            <img src={logo} alt="" className="ddds" />
+            <a href="/">
+              <img src={logo} alt="" className="ddds" />
+            </a>
           </div>
           <div className="another">
             {/* Desktop Nav */}
             <ul className="nav_ul ">
-              <li className="nav_li">
+              {/* <li className="nav_li">
                 <a href="/">Home</a>
-              </li>
+              </li> */}
               <li className="nav_li" onClick={handleDetailsClick}>
                 Details
               </li>

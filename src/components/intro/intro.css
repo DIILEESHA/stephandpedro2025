@@ -1,6 +1,8 @@
 .intro {
   overflow: hidden;
   min-height: 100vh;
+  background-color: #efebe5;
+  
   width: 100%;
   position: relative;
 }
