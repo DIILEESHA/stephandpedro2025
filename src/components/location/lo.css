@@ -45,12 +45,6 @@
 }
 
 .soo {
-  padding: 2px;
-  /* width:50%; */
-  display: flex;
-  /* align-items: center; */
-  justify-content: center;
-  margin: 0 auto;
 }
 
 .ocation_addres {
@@ -66,15 +60,17 @@
   font-family: "sans";
   color: #fff;
   font-size: 17px;
-  font-weight: bold;
+  font-weight: 500;
   text-transform: capitalize;
-  padding: 20px 50px;
+  padding: 15px 30px !important;
+  /* border-radius: 10px; */
   position: relative;
+  text-decoration: underline;
 }
 
 .linka::after {
   position: absolute;
-  border: 1px solid #1a1a1a;
+  /* border: 1px solid #1a1a1a; */
   inset: 0;
   display: flex;
   align-items: center;

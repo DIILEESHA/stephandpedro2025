@@ -23,6 +23,7 @@ const Location = () => {
           </p>
           <div className="soo">
             <a
+            target="_blank"
               href="https://maps.app.goo.gl/em9J3tQC2wYVCJAs8"
               className="linka"
             >
@@ -42,6 +43,8 @@ const Location = () => {
           </p>
           <div className="soo">
             <a
+            target="_blank"
+
               href="https://maps.app.goo.gl/em9J3tQC2wYVCJAs8"
               className="linka"
             >
