@@ -53,10 +53,10 @@ const Count = () => {
             <h3 className="count_value">Hours</h3>
           </div>
 
-          <div className="count_sub">
+          {/* <div className="count_sub">
             <h2 className="count_day">{timeLeft.minutes}</h2>
             <h3 className="count_value">Minutes</h3>
-          </div>
+          </div> */}
 
           <div className="count_sub">
             <h2 className="count_day">{timeLeft.seconds}</h2>
