@@ -4,6 +4,7 @@ import Travel from "./components/travel/Travel";
 import Home from "./Home";
 import AdminDashboard from "./components/travel/AdminDashboard";
 import LanguagePopup from "./LanguagePopup";
+import Transport from "./components/transport/Transport";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/where-to-stay" element={<Travel />} />
+          <Route path="/transport" element={<Transport />} />
           <Route path="/admin" element={<AdminDashboard />} />
         </Routes>
 

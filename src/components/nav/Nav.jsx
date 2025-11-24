@@ -88,8 +88,10 @@ const Nav = () => {
               </li>
               <li className="nav_li" onClick={gala}>
                 Gallery
+              </li>{" "}
+              <li className="nav_li">
+                <a href="transport">transport</a>
               </li>
-
               {/* 🌍 FLAGS */}
               <li className="nav_li lang_flags">
                 <motion.img

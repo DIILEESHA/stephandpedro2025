@@ -95,7 +95,7 @@
 @import "tailwindcss";
 :root {
   --black: #1f1a19;
-  --brown:#333
+  --brown: #333;
 }
 .fo {
   background-color: var(--black);
@@ -112,4 +112,35 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+/* //trans */
+
+.trans {
+  font-family: "bic";
+  font-size: 100px;
+  color: #fff;
+  text-align: center;
+}
+
+.mention_here {
+  color: #fff;
+  margin: 20px auto;
+  font-size: 17px;
+  line-height: 150%;
+  width: 40%;
+  text-align: center;
+  font-family: "play";
+}
+@media (max-width: 826px) {
+  .trans {
+    font-size: 70px;
+    text-shadow: 1px 1px #000;
+    line-height: 100%;
+    width: 80%;
+  }
+
+  .mention_here {
+    width: 90%;
+  }
 }
