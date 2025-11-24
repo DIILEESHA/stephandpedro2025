@@ -1,21 +1,28 @@
 "use client";
 import { MoveRight, Menu, X } from "lucide-react";
-import { Dropdown, Menu as AntMenu } from "antd";
-import { DownOutlined } from "@ant-design/icons";
-import "./n.css";
+import { motion } from "framer-motion";
 import { useNavigate, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+
 import usaflag from "../../assets/usa.png";
 import ptflag from "../../assets/pt.png";
 import logo from "../../assets/logo.png";
+
+import "./n.css";
+
 const Nav = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { i18n } = useTranslation();
-  const [currentLang, setCurrentLang] = useState(i18n.language);
 
+  const [currentLang, setCurrentLang] = useState(i18n.language);
   const [open, setOpen] = useState(false);
+  const [animateFlags, setAnimateFlags] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setAnimateFlags(true), 250);
+  }, []);
 
   const toggleMenu = () => {
     setOpen(!open);
@@ -55,32 +62,24 @@ const Nav = () => {
     }
   };
 
-  // Ant Design language menu
-  const languageMenu = (
-    <AntMenu
-      onClick={(e) => i18n.changeLanguage(e.key)}
-      items={[
-        { key: "en", label: "EN" },
-        { key: "pt", label: "PT" },
-      ]}
-    />
-  );
+  const handleLanguageChange = (lang) => {
+    i18n.changeLanguage(lang);
+    setCurrentLang(lang);
+  };
 
   return (
     <>
       <div className="nav_container">
+        {/* DESKTOP NAV */}
         <div className="all desktop_nav">
           <div className="logo">
             <a href="/">
               <img src={logo} alt="" className="ddds" />
             </a>
           </div>
+
           <div className="another">
-            {/* Desktop Nav */}
-            <ul className="nav_ul ">
-              {/* <li className="nav_li">
-                <a href="/">Home</a>
-              </li> */}
+            <ul className="nav_ul">
               <li className="nav_li" onClick={handleDetailsClick}>
                 Details
               </li>
@@ -91,82 +90,75 @@ const Nav = () => {
                 Gallery
               </li>
 
+              {/* 🌍 FLAGS */}
               <li className="nav_li lang_flags">
-                <img
+                <motion.img
                   src={usaflag}
                   alt="English"
                   className={`lang_flag ${
                     currentLang === "en" ? "active_flag" : ""
                   }`}
-                  onClick={() => {
-                    i18n.changeLanguage("en");
-                    setCurrentLang("en");
-                  }}
+                  initial={{ scale: 0, opacity: 0 }}
+                  animate={animateFlags ? { scale: 1, opacity: 1 } : {}}
+                  transition={{ type: "spring", stiffness: 120, damping: 10 }}
+                  onClick={() => handleLanguageChange("en")}
                 />
 
-                <img
+                <motion.img
                   src={ptflag}
                   alt="Portuguese"
                   className={`lang_flag ${
                     currentLang === "pt" ? "active_flag" : ""
                   }`}
-                  onClick={() => {
-                    i18n.changeLanguage("pt");
-                    setCurrentLang("pt");
-                  }}
+                  initial={{ scale: 0, opacity: 0 }}
+                  animate={animateFlags ? { scale: 1, opacity: 1 } : {}}
+                  transition={{ type: "spring", stiffness: 120, damping: 10 }}
+                  onClick={() => handleLanguageChange("pt")}
                 />
               </li>
-              {/* <a
-            style={{ textDecoration: "none", color: "inherit" }}
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfPsXdY5mb40sHleLMY1yFHMWcAUiX9WZvHjEOejlKnpxDznw/viewform?usp=sharing&ouid=107355289206639223256"
-          >
-            <li className="nav_li last" onClick={() => scrollToSection("rsvp")}>
-              RSVP <MoveRight color="#fff" />
-            </li>
-          </a> */}
-
-              {/* Language Dropdown */}
             </ul>
           </div>
         </div>
-        {/* Mobile menu icon */}
+
+        {/* MOBILE TOP BAR */}
+
         <div className="mobile_menu_icon">
           <div>
             <Menu size={30} color="#fff" onClick={toggleMenu} />
           </div>
 
           <div className="mobile_flag_wrap">
-            <img
+            <motion.img
               src={usaflag}
               alt="English"
               className={`lang_flag ${
                 currentLang === "en" ? "active_flag" : ""
               }`}
-              onClick={() => {
-                i18n.changeLanguage("en");
-                setCurrentLang("en");
-              }}
+              initial={{ scale: 0, opacity: 0 }}
+              animate={animateFlags ? { scale: 1, opacity: 1 } : {}}
+              transition={{ type: "spring", stiffness: 120, damping: 10 }}
+              onClick={() => handleLanguageChange("en")}
             />
 
-            <img
+            <motion.img
               src={ptflag}
               alt="Portuguese"
               className={`lang_flag ${
                 currentLang === "pt" ? "active_flag" : ""
               }`}
-              onClick={() => {
-                i18n.changeLanguage("pt");
-                setCurrentLang("pt");
-              }}
+              initial={{ scale: 0, opacity: 0 }}
+              animate={animateFlags ? { scale: 1, opacity: 1 } : {}}
+              transition={{ type: "spring", stiffness: 120, damping: 10 }}
+              onClick={() => handleLanguageChange("pt")}
             />
           </div>
         </div>
       </div>
 
-      {/* Overlay */}
+      {/* MOBILE OVERLAY */}
       {open && <div className="mobile_overlay" onClick={closeMenu}></div>}
 
-      {/* Mobile Drawer */}
+      {/* MOBILE DRAWER */}
       <div className={`mobile_drawer ${open ? "open" : ""}`}>
         <div className="mobile_drawer_header">
           <X size={30} color="#fff" onClick={toggleMenu} />
@@ -182,31 +174,8 @@ const Nav = () => {
             Home
           </li>
           <li onClick={handleDetailsClick}>Details</li>
-          <li
-            onClick={() => {
-              closeMenu();
-              navigate("/where-to-stay");
-            }}
-          >
-            Where to Stay
-          </li>
+          <li onClick={() => navigate("/where-to-stay")}>Where to Stay</li>
           <li onClick={gala}>Gallery</li>
-          {/* <a
-            style={{ color: "inherit", textDecoration: "none" }}
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfPsXdY5mb40sHleLMY1yFHMWcAUiX9WZvHjEOejlKnpxDznw/viewform?usp=sharing&ouid=107355289206639223256"
-          >
-            <li
-              className="mobile_last"
-              onClick={() => {
-                closeMenu();
-                scrollToSection("rsvp");
-              }}
-            >
-              RSVP <MoveRight color="#fff" />
-            </li>
-          </a> */}
-
-          {/* Language Dropdown Mobile */}
         </ul>
       </div>
     </>

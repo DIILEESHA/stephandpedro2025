@@ -61,6 +61,53 @@
   gap: 20px;
   margin: 20px 0;
 }
+/* ---------- LANGUAGE DROPDOWN ---------- */
+
+.lang_dropdown_item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.dropdown_flag {
+  width: 24px;
+  height: 16px;
+  border-radius: 3px;
+}
+
+/* Flag shown on navbar */
+.current_lang_flag {
+  width: 32px;
+  height: 22px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px rgba(255,255,255,0.7);
+  transition: 0.25s ease;
+}
+
+.current_lang_flag:hover {
+  transform: scale(1.15);
+}
+
+/* Mobile flag style */
+.mobile_flag {
+  margin-left: 10px;
+}
+
+/* ---------- DROPDOWN CONTAINER ---------- */
+.lang_flags_dropdown {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* ---------- MOBILE LAYOUT ---------- */
+.mobile_flag_wrap {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
 
 .nav_li {
   cursor: pointer;

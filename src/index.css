@@ -17,6 +17,44 @@
   src: url("../public/fonts/Bickham\ Script\ Pro\ Regular.ttf")
     format("truetype");
 }
+.language_modal .ant-modal-content {
+  border-radius: 12px;
+  text-align: center;
+  padding: 2rem;
+  background: #fdfdfd;
+}
+
+.modal_content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.flag_buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.lang_flag {
+  width: 60px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s ease;
+}
+
+.lang_flag:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+}
+
+.active_flag {
+  border: 2px solid #1890ff; /* Ant Design primary color */
+  transform: scale(1.2);
+}
 
 @font-face {
   font-family: "play";
