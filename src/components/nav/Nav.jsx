@@ -87,14 +87,14 @@ const Nav = () => {
           <li className="nav_li" onClick={gala}>
             Gallery
           </li>
-          <a
+          {/* <a
             style={{ textDecoration: "none", color: "inherit" }}
             href="https://docs.google.com/forms/d/e/1FAIpQLSfPsXdY5mb40sHleLMY1yFHMWcAUiX9WZvHjEOejlKnpxDznw/viewform?usp=sharing&ouid=107355289206639223256"
           >
             <li className="nav_li last" onClick={() => scrollToSection("rsvp")}>
               RSVP <MoveRight color="#fff" />
             </li>
-          </a>
+          </a> */}
 
           {/* Language Dropdown */}
         </ul>
@@ -142,7 +142,7 @@ const Nav = () => {
             Where to Stay
           </li>
           <li onClick={gala}>Gallery</li>
-          <a
+          {/* <a
             style={{ color: "inherit", textDecoration: "none" }}
             href="https://docs.google.com/forms/d/e/1FAIpQLSfPsXdY5mb40sHleLMY1yFHMWcAUiX9WZvHjEOejlKnpxDznw/viewform?usp=sharing&ouid=107355289206639223256"
           >
@@ -155,7 +155,7 @@ const Nav = () => {
             >
               RSVP <MoveRight color="#fff" />
             </li>
-          </a>
+          </a> */}
 
           {/* Language Dropdown Mobile */}
         </ul>
