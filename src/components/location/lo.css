@@ -20,7 +20,22 @@
 .location_container {
   background-color: #efebe5;
   padding: 80px;
+  position: relative;
 }
+
+.location_container::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center 10%;
+  opacity: 10%;
+  background-image: url("../../assets/heartss.png");
+}
+
 .losi {
   max-width: 1200px;
   margin: 0 auto;
@@ -63,14 +78,12 @@
   font-weight: 500;
   text-transform: capitalize;
   padding: 15px 30px !important;
-  /* border-radius: 10px; */
   position: relative;
   text-decoration: underline;
 }
 
 .linka::after {
   position: absolute;
-  /* border: 1px solid #1a1a1a; */
   inset: 0;
   display: flex;
   align-items: center;
