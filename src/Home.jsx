@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Location from "./components/location/Location";
 import Count from "./components/count/Count";
+import Vheader from "./components/header/Vheader";
 
 const Home = () => {
   const location = useLocation();
@@ -25,7 +26,8 @@ const Home = () => {
 
   return (
     <div>
-      <Header id="header" />
+      {/* <Header id="header" /> */}
+      <Vheader/>
       <Intro id="intro" />
       {/* <Detail /> */}
 

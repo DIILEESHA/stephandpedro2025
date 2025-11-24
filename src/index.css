@@ -51,6 +51,7 @@
 @import "tailwindcss";
 :root {
   --black: #1f1a19;
+  --brown:#333
 }
 .fo {
   background-color: var(--black);

@@ -71,9 +71,9 @@ const Header = () => {
             <img src={headerimg} alt="" className="header_img" />
           </motion.div>
 
-          <motion.div className="header_sub xx" variants={rightSlide}>
+          {/* <motion.div className="header_sub xx" variants={rightSlide}>
             <img src={headerimg2} alt="" className="header_img" />
-          </motion.div>
+          </motion.div> */}
         </div>
       </motion.div>
     </div>
