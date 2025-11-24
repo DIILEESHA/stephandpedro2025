@@ -5,6 +5,7 @@ import Intro from "./components/intro/Intros";
 import Parallaxs from "./components/paralax/Parallaxs";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import Location from "./components/location/Location";
 
 const Home = () => {
   const location = useLocation();
@@ -25,12 +26,14 @@ const Home = () => {
     <div>
       <Header id="header" />
       <Intro id="intro" />
+        {/* <Detail /> */}
+
       <div id="details">
-        <Detail />
+      <Location />
       </div>
       <Parallaxs id="parallax" />
       <div id="gallery">
-        <Gallery />
+        {/* <Gallery /> */}
       </div>
     </div>
   );

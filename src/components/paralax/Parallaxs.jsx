@@ -35,8 +35,8 @@ const Parallaxs = () => {
 
   return (
     <div className="para">
-      <Parallax speed={0}>
-        <motion.div className="parallax_wrapper" variants={zoomSoft} initial="hidden" whileInView="visible">
+      <div>
+        <motion.div className="" variants={zoomSoft} initial="hidden" whileInView="visible">
           <div className="paralx_one">
             <h2 className="parallx_titles">{t("title")}</h2>
             <p className="parallax_paras">{t("description")}</p>
@@ -80,7 +80,7 @@ const Parallaxs = () => {
             <motion.img variants={zoomSoft} className="sada marai" src={cof3} alt="parallax-img" />
           </motion.div>
         </div>
-      </Parallax>
+      </div>
     </div>
   );
 };

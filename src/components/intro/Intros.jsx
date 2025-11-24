@@ -5,12 +5,34 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 // Framer motion variants
-const fadeUp = { hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 1.4, ease: "easeOut" } } };
-const fadeDown = { hidden: { opacity: 0, y: -40 }, visible: { opacity: 1, y: 0, transition: { duration: 1.4, ease: "easeOut" } } };
-const leftSlide = { hidden: { opacity: 0, x: -60 }, visible: { opacity: 1, x: 0, transition: { duration: 1.6, ease: "easeOut" } } };
-const rightSlide = { hidden: { opacity: 0, x: 60 }, visible: { opacity: 1, x: 0, transition: { duration: 1.6, ease: "easeOut" } } };
-const scaleIn = { hidden: { opacity: 0, scale: 0.95 }, visible: { opacity: 1, scale: 1, transition: { duration: 1.6, ease: "easeOut" } } };
-const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.25 } } };
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1.4, ease: "easeOut" } },
+};
+const fadeDown = {
+  hidden: { opacity: 0, y: -40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1.4, ease: "easeOut" } },
+};
+const leftSlide = {
+  hidden: { opacity: 0, x: -60 },
+  visible: { opacity: 1, x: 0, transition: { duration: 1.6, ease: "easeOut" } },
+};
+const rightSlide = {
+  hidden: { opacity: 0, x: 60 },
+  visible: { opacity: 1, x: 0, transition: { duration: 1.6, ease: "easeOut" } },
+};
+const scaleIn = {
+  hidden: { opacity: 0, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 1.6, ease: "easeOut" },
+  },
+};
+const stagger = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.25 } },
+};
 
 const Intros = () => {
   const { t } = useTranslation("home"); // use the "home" namespace
@@ -26,17 +48,16 @@ const Intros = () => {
       <div className="intro_container">
         <div className="intro_grid">
           {/* IMAGE */}
-          <motion.div className="intro_sub kali" variants={leftSlide}>
-            <motion.img
-              className="intro_img"
-              src={mo}
-              alt={t("ourStory.title")}
-              variants={scaleIn}
-            />
-          </motion.div>
 
           {/* TEXT BLOCK */}
           <motion.div className="intro_sub cos" variants={rightSlide}>
+
+
+            <div className="ppp">
+
+            <img className="hey" src="http://localhost:5173/src/assets/gallery1.jpg" alt="" />
+            </div>
+
             <motion.h1 className="intro_title" variants={fadeDown}>
               {t("ourStory.title")}
             </motion.h1>

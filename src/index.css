@@ -12,7 +12,11 @@
   font-family: "sans";
   src: url("../public/fonts/WorkSans-VariableFont_wght.ttf") format("truetype");
 }
-
+@font-face {
+  font-family: "bic";
+  src: url("../public/fonts/Bickham\ Script\ Pro\ Regular.ttf")
+    format("truetype");
+}
 .oo {
   font-family: "sans";
 }

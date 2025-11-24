@@ -108,6 +108,10 @@ const Travel = () => {
                     required
                   />
                 </div>
+<div className="arched-image">
+
+  <img src="https://cdn2.paraty.es/axis-corpo/images/cf5822c06d57171=s500" alt="" />
+</div>
 
                 <div className="form_input_section">
                   <label className="form_label">{t("country")}</label>

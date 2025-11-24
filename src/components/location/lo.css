@@ -1,0 +1,142 @@
+.cre {
+  font-family: "bic";
+  text-align: center;
+  font-size: 100px;
+  width: 50%;
+  line-height: 100%;
+  margin: 10px auto;
+  text-transform: capitalize;
+}
+
+.location_grid {
+  gap: 50px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.location_container {
+  background-color: #efebe5;
+  padding: 80px;
+}
+.losi{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.ocation_img {
+  width: 100%;
+}
+
+.location_name {
+  font-family: "tokyo";
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.location_title {
+  font-family: "eb";
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.soo {
+  padding: 2px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border: 1px solid #1a1a1a;
+}
+
+.linka {
+  width: fit-content;
+  margin: 0px 0;
+  background-color: #1a1a1a;
+  font-family: "sans";
+  color: #fff;
+  font-size: 17px;
+  text-transform: capitalize;
+  padding: 10px 50px;
+}
+
+.ocation_addres {
+  margin-bottom: 40px;
+}
+
+/* MEDIA QUERIES FOR SMALLER DEVICES */
+
+
+
+@media (max-width: 1188px) {
+
+
+.location_grid {
+  gap: 0px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.location_container {
+  background-color: #efebe5;
+  padding:50px 20px;
+}
+.losi{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 868px) {
+  .cre {
+    font-size: 60px;
+    width: 70%;
+  }
+
+  .location_grid {
+    gap: 30px;
+    grid-template-columns: 1fr; /* single column */
+  }
+
+  .location_container {
+    padding: 50px;
+  }
+
+  .location_name {
+    font-size: 20px;
+  }
+
+  .linka {
+    font-size: 16px;
+    padding: 8px 30px;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .cre {
+    font-size: 40px;
+    width: 90%;
+  }
+
+  .location_container {
+    padding: 30px;
+  }
+
+  .location_name {
+    font-size: 18px;
+  }
+
+  .linka {
+    font-size: 14px;
+    padding: 6px 20px;
+  }
+
+  .location_title {
+    font-size: 18px;
+  }
+}
