@@ -19,9 +19,9 @@
   background-color: #efebe5;
   padding: 80px;
 }
-.losi{
-    max-width: 1200px;
-    margin: 0 auto;
+.losi {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .ocation_img {
   width: 100%;
@@ -37,7 +37,8 @@
 .location_title {
   font-family: "eb";
   text-align: center;
-  font-weight: 700;
+  opacity: 80%;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
@@ -68,26 +69,22 @@
 
 /* MEDIA QUERIES FOR SMALLER DEVICES */
 
-
-
 @media (max-width: 1188px) {
+  .location_grid {
+    gap: 0px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 
-
-.location_grid {
-  gap: 0px;
-  text-align: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.location_container {
-  background-color: #efebe5;
-  padding:50px 20px;
-}
-.losi{
+  .location_container {
+    background-color: #efebe5;
+    padding: 50px 20px;
+  }
+  .losi {
     max-width: 1200px;
     margin: 0 auto;
-}
+  }
 }
 
 /* Tablets (768px and below) */
@@ -126,9 +123,8 @@
   .location_container {
     padding: 30px;
   }
-.location_title{
-
-}
+  .location_title {
+  }
   .location_name {
     font-size: 18px;
   }

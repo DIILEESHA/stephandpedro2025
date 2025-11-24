@@ -6,6 +6,7 @@ import Parallaxs from "./components/paralax/Parallaxs";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Location from "./components/location/Location";
+import Count from "./components/count/Count";
 
 const Home = () => {
   const location = useLocation();
@@ -26,15 +27,14 @@ const Home = () => {
     <div>
       <Header id="header" />
       <Intro id="intro" />
-        {/* <Detail /> */}
+      {/* <Detail /> */}
 
+      <Count />
       <div id="details">
-      <Location />
+        <Location />
       </div>
-      <Parallaxs id="parallax" />
-      <div id="gallery">
-        {/* <Gallery /> */}
-      </div>
+      {/* <Parallaxs id="parallax" /> */}
+      <div id="gallery">{/* <Gallery /> */}</div>
     </div>
   );
 };

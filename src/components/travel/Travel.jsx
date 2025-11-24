@@ -109,7 +109,6 @@ const Travel = () => {
                   />
                 </div>
 
-
                 <div className="form_input_section">
                   <label className="form_label">{t("country")}</label>
                   <div className="naugthy">
