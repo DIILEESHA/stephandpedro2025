@@ -6,6 +6,10 @@ import Nav from "../nav/Nav";
 
 import header from "../../assets/header1.jpg";
 import header2 from "../../assets/header2.jpg";
+import header3 from "../../assets/gallery2.jpg";
+import header4 from "../../assets/gallery6.jpg";
+
+const slideshowImages = [header, header2,header3,header4];
 
 const nameVariant = {
   hidden: { opacity: 0, y: 20, scale: 0.95 },
@@ -43,8 +47,6 @@ const scrollToSection = (id, closeMenu) => {
   }
   if (closeMenu) closeMenu();
 };
-
-const slideshowImages = [header, header2];
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

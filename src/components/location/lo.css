@@ -141,7 +141,7 @@
 /* Mobile (480px and below) */
 @media (max-width: 480px) {
   .cre {
-    font-size: 70px;
+    font-size: 60px;
     width: 90%;
   }
 
@@ -156,7 +156,8 @@
 
   .linka {
     font-size: 16px;
-    padding: 20px 20px;
+    font-weight: 500;
+    padding: 10px 20px;
   }
 
   .location_title {
