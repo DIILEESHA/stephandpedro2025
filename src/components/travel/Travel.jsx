@@ -61,7 +61,9 @@ const Travel = () => {
   return (
     <div>
       <Nav />
-      <TravelHeader />
+      {/* <TravelHeader /> */}
+      <div className="tros">
+
       <motion.div
         className="travel_container"
         initial="hidden"
@@ -88,6 +90,9 @@ const Travel = () => {
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true, amount: 0.3 }}
         >
+          <div className="dcv">
+
+
           <form ref={formRef} className="travel_form" onSubmit={handleSubmit}>
             <div className="form_input_section">
               <label htmlFor="fullName" className="form_label">
@@ -138,10 +143,12 @@ const Travel = () => {
                 required
               />
             </div>
+<div className="so">
 
-            <button type="submit" disabled={loading} className="links">
+            <button type="submit" disabled={loading} className="links de">
               {loading ? t("submittingBtn") : t("submitBtn")}
             </button>
+</div>
 
             <p
               className="form_note"
@@ -155,8 +162,10 @@ const Travel = () => {
               {t("formNote")}
             </p>
           </form>
+          </div>
         </motion.div>
       </motion.div>
+      </div>
 
       <div className="teal">
         <h2 className="near_title">{t("nearHotels")}</h2>
