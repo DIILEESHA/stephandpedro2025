@@ -144,7 +144,7 @@
   font-family: "bic";
   font-size: 100px;
   text-shadow: 1px 3px #97a2a5;
-
+line-height: 100%;
   color: var(--black);
   font-weight: 500;
   margin-bottom: 30px;
