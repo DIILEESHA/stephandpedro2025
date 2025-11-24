@@ -37,7 +37,7 @@
 }
 
 .travel_title {
-  text-shadow: 1px 3px  #97a2a5;
+  text-shadow: 1px 3px #97a2a5;
 
   font-family: "bic";
   line-height: 150%;
@@ -108,7 +108,7 @@
   margin-bottom: 3px;
 }
 .arched-image {
-  width: 320px;   /* adjust to your layout */
+  width: 320px; /* adjust to your layout */
   height: 480px;
   overflow: hidden;
   clip-path: path("M0 140 Q160 0 320 140 L320 480 L0 480 Z");
@@ -120,8 +120,8 @@
   object-fit: cover;
 }
 
-
-.form_input,.naugthy {
+.form_input,
+.naugthy {
   border: 1px solid #3333334e;
   padding: 10px 10px;
   background-color: #ffffff4f;
@@ -143,7 +143,7 @@
   text-align: center;
   font-family: "bic";
   font-size: 100px;
-  text-shadow: 1px 3px  #97a2a5;
+  text-shadow: 1px 3px #97a2a5;
 
   color: var(--black);
   font-weight: 500;
@@ -207,7 +207,7 @@
     flex-direction: column;
     padding: 140px 10px 50px 10px;
   }
- .hotel_img {
+  .hotel_img {
     height: 30vh;
   }
   .hotel_grid {
@@ -219,9 +219,8 @@
     font-size: 65px;
   }
   .travel_title {
-    line-height: 90%
-    
-    !important;
+    line-height: 90% !important;
+    width: 90%;
     font-size: 70px;
     margin-bottom: 10px;
   }
