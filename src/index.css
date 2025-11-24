@@ -17,6 +17,12 @@
   src: url("../public/fonts/Bickham\ Script\ Pro\ Regular.ttf")
     format("truetype");
 }
+
+@font-face {
+  font-family: "play";
+  src: url("../public/fonts/PlayfairDisplay-VariableFont_wght.ttf")
+    format("truetype");
+}
 .oo {
   font-family: "sans";
 }

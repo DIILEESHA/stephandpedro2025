@@ -1,11 +1,12 @@
 .header {
   position: relative;
   height: 110vh;
+  
   overflow: hidden;
 }
 
 .slideshow-image {
-  position: absolute;
+    position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -33,7 +34,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #000000a9;
+  /* background-color: #000000a9; */
   top: 0;
   left: 0;
   /* z-index: 1; */
@@ -50,14 +51,15 @@
 }
 
 .header::after {
-  content: "";
+    content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #201f1fa9;
+  background-color: #141414a9;
+  
 }
 
 .bottom_date {
@@ -130,8 +132,8 @@
   border-right-color: transparent;
 }
 .bottom_para {
-  font-family: "eb";
-  color: transparent;
+    font-family: "eb";
+    color: transparent;
   opacity: 0%;
   position: relative;
   font-size: 22px;
@@ -152,6 +154,7 @@
   font-weight: 400;
   color: #fff !important;
   text-transform: capitalize;
+  text-shadow: 1px 1px #00000046!important;
 }
 
 .km {

@@ -3,7 +3,7 @@
   text-align: center;
   font-size: 100px;
   width: 50%;
-  text-shadow: 1px 1px  #97a2a5;
+  text-shadow: 1px 1px #97a2a5;
 
   /* font-weight: 700; */
   line-height: 100%;
@@ -46,16 +46,17 @@
 }
 
 .location_name {
-  font-family: "tokyo";
+  font-family: "play";
   font-size: 25px;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 10px;
+  color: var(--black);
 }
 
 .location_title {
-  font-family: "eb";
+  font-family: "play";
   text-align: center;
-  opacity: 80%;
+  /* opacity: 80%; */
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -64,7 +65,7 @@
 }
 
 .ocation_addres {
-  font-family: "sans";
+  font-family: "eb";
   font-size: 16px;
   line-height: 150%;
 }
@@ -73,7 +74,7 @@
   width: 50%;
   margin: 0px 0;
   background-color: #1a1a1aec;
-  font-family: "sans";
+  font-family: "play";
   color: #fff;
   font-size: 17px;
   font-weight: 500;
@@ -161,7 +162,7 @@
   .location_title {
   }
   .location_name {
-    font-size: 18px;
+    font-size: 22px;
   }
 
   .linka {

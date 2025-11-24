@@ -182,12 +182,12 @@ const Travel = () => {
             {
               name: "Flor de Sal by The Editory",
               img: "https://www.editoryhotels.com/media/ccabjqs5/4.jpg?anchor=center&mode=crop&width=577&height=350&rnd=133881675686070000",
-              link: "https://editoryhotels.com/flordesal/",
+              link: "https://www.editoryhotels.com",
             },
             {
               name: "AP Dona Aninhas (AP Hotels & Resorts)",
               img: "https://ap-hotelsresorts.com/wp-content/uploads/cache/2023/05/Hotel-AP-Dona-Aninhas-em-Viana-do-Castelo-scaled-1/1757707684.jpg",
-              link: "https://ap-hotelsresorts.com/hotel/dona-aninhas/",
+              link: "https://ap-hotelsresorts.com/",
             },
           ].map((hotel, i) => (
             <div className="ppp">

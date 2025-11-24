@@ -38,8 +38,8 @@ const Count = () => {
       <div className="count_container">
         <h2 className="main_title">Countdown to the Big Day</h2>
         <p className="count_para">
-          The most special day of our lives is almost here! Celebrate with us and mark your
-          calendars.
+          The most special day of our lives is almost here! Celebrate with us
+          and mark your calendars.
         </p>
 
         <div className="count_grid">

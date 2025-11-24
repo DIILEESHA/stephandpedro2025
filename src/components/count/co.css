@@ -16,6 +16,8 @@
   height: 100%;
   background-color: #3333339a;
   background-color: #00000082;
+  background-color: #141414a9;
+
 
   pointer-events: none;
 }
@@ -31,12 +33,20 @@
   flex-direction: column;
 }
 .main_title {
-  text-shadow: 1px 1px  #97a2a5;
+  text-shadow: 1px 1px #97a2a5;
 
   font-family: "bic";
   color: #fff;
   font-size: 100px;
   line-height: 100%;
+}
+
+.vbn {
+  font-family: "play";
+  color: #fff;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .count_grid {
