@@ -77,37 +77,6 @@ const Header = () => {
 
       <Nav />
 
-      {/* Mobile nav menu */}
-      {mobileMenuOpen && (
-        <div className="mobile-nav-menu">
-          <div className="doee">
-            <div
-              className="mobile-nav_list"
-              onClick={() =>
-                scrollToSection("dettagli", () => setMobileMenuOpen(false))
-              }
-            >
-              DETTAGLI
-            </div>
-            <div
-              className="mobile-nav_list"
-              onClick={() =>
-                scrollToSection("regalo", () => setMobileMenuOpen(false))
-              }
-            >
-              REGALO
-            </div>
-            <div
-              className="mobile-nav_list"
-              onClick={() =>
-                scrollToSection("album", () => setMobileMenuOpen(false))
-              }
-            >
-              CARICA FOTO
-            </div>
-          </div>
-        </div>
-      )}
 <div className="fff">
 
       <motion.div className="couple_name_section">

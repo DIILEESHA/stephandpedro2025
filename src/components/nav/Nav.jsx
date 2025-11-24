@@ -8,6 +8,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import usaflag from "../../assets/usa.png";
 import ptflag from "../../assets/pt.png";
+import logo from "../../assets/logo.png";
 const Nav = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -68,47 +69,50 @@ const Nav = () => {
   return (
     <>
       <div className="nav_container">
-        {/* Desktop Nav */}
-        <ul className="nav_ul desktop_nav">
-          <li className="nav_li">
-            <a href="/">Home</a>
-          </li>
-          <li className="nav_li" onClick={handleDetailsClick}>
-            Details
-          </li>
-          <li className="nav_li" onClick={() => navigate("/where-to-stay")}>
-            Where to Stay
-          </li>
-          <li className="nav_li" onClick={gala}>
-            Gallery
-          </li>
+        <div className="all desktop_nav">
+          <div className="logo">
+            <img src={logo} alt="" className="ddds" />
+          </div>
+          <div className="another">
+            {/* Desktop Nav */}
+            <ul className="nav_ul ">
+            
+              <li className="nav_li" onClick={handleDetailsClick}>
+                Details
+              </li>
+              <li className="nav_li" onClick={() => navigate("/where-to-stay")}>
+                Where to Stay
+              </li>
+              <li className="nav_li" onClick={gala}>
+                Gallery
+              </li>
 
-          <li className="nav_li lang_flags">
-            <img
-              src={usaflag}
-              alt="English"
-              className={`lang_flag ${
-                currentLang === "en" ? "active_flag" : ""
-              }`}
-              onClick={() => {
-                i18n.changeLanguage("en");
-                setCurrentLang("en");
-              }}
-            />
+              <li className="nav_li lang_flags">
+                <img
+                  src={usaflag}
+                  alt="English"
+                  className={`lang_flag ${
+                    currentLang === "en" ? "active_flag" : ""
+                  }`}
+                  onClick={() => {
+                    i18n.changeLanguage("en");
+                    setCurrentLang("en");
+                  }}
+                />
 
-            <img
-              src={ptflag}
-              alt="Portuguese"
-              className={`lang_flag ${
-                currentLang === "pt" ? "active_flag" : ""
-              }`}
-              onClick={() => {
-                i18n.changeLanguage("pt");
-                setCurrentLang("pt");
-              }}
-            />
-          </li>
-          {/* <a
+                <img
+                  src={ptflag}
+                  alt="Portuguese"
+                  className={`lang_flag ${
+                    currentLang === "pt" ? "active_flag" : ""
+                  }`}
+                  onClick={() => {
+                    i18n.changeLanguage("pt");
+                    setCurrentLang("pt");
+                  }}
+                />
+              </li>
+              {/* <a
             style={{ textDecoration: "none", color: "inherit" }}
             href="https://docs.google.com/forms/d/e/1FAIpQLSfPsXdY5mb40sHleLMY1yFHMWcAUiX9WZvHjEOejlKnpxDznw/viewform?usp=sharing&ouid=107355289206639223256"
           >
@@ -117,8 +121,10 @@ const Nav = () => {
             </li>
           </a> */}
 
-          {/* Language Dropdown */}
-        </ul>
+              {/* Language Dropdown */}
+            </ul>
+          </div>
+        </div>
         {/* Mobile menu icon */}
         <div className="mobile_menu_icon">
           <div>
@@ -163,14 +169,7 @@ const Nav = () => {
         </div>
 
         <ul className="mobile_nav_ul">
-          <li
-            onClick={() => {
-              closeMenu();
-              navigate("/");
-            }}
-          >
-            Home
-          </li>
+         
           <li onClick={handleDetailsClick}>Details</li>
           <li
             onClick={() => {
