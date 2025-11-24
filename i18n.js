@@ -13,30 +13,38 @@ import travelEN from "./src/locales/en/travel.json";
 import travelPT from "./src/locales/pt/travel.json";
 import toEN from "./src/locales/en/to.json";
 import toPT from "./src/locales/pt/to.json";
+import countdownEN from "./src/locales/en/countdown.json";
+import countdownPT from "./src/locales/pt/countdown.json";
+
+import locationEN from "./src/locales/en/location.json";
+import locationPT from "./src/locales/pt/location.json";
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources: {
-      en: { 
+      en: {
         home: homeEN,
         detail: detailEN,
         parallax: parallaxEN,
         travel: travelEN,
-        to:toEN,
-
+        to: toEN,
+        countdown: countdownEN,
+        location: locationEN
       },
-      pt: { 
+      pt: {
         home: homePT,
         detail: detailPT,
         parallax: parallaxPT,
         travel: travelPT,
-        to:toPT
+        to: toPT,
+        countdown: countdownPT,
+        location: locationPT
       },
     },
     lng: "pt",
     fallbackLng: "pt",
-    ns: ["home", "detail", "parallax", "travel","to"],
+    ns: ["home", "detail", "parallax", "travel", "to", "countdown", "location"],
     defaultNS: "home",
     interpolation: { escapeValue: false },
     detection: { order: ["localStorage", "navigator"], caches: ["localStorage"] },

@@ -1,51 +1,50 @@
 import "./lo.css";
 import a from "../../assets/aaa.jpg";
 import ab from "../../assets/bbb.jpg";
+import { useTranslation } from "react-i18next";
+
 const Location = () => {
+  const { t } = useTranslation("location");
+
   return (
     <div className="location_container">
       <div className="losi">
-        <h2 className="location_title">a timeless celebation for us</h2>
-
-        <h2 className="cre">ceremony & reception venues</h2>
+        <h2 className="location_title">{t("timeless_celebration")}</h2>
+        <h2 className="cre">{t("venues")}</h2>
 
         <div className="location_grid">
           <div className="location_sub">
             <img src={ab} alt="" className="ocation_img" />
-            <h2 className="location_name">igreja Divino Salvador de Gandra</h2>
-
-            <p className="ocation_addres">
-              igreja Divino Salvador de Gandra
-              <br />
-              4930-325 Gandra, Portugal
-            </p>
+            <h2 className="location_name">{t("church_name")}</h2>
+            <p
+              className="ocation_addres"
+              dangerouslySetInnerHTML={{ __html: t("church_address") }}
+            />
             <div className="soo">
               <a
                 target="_blank"
                 href="https://maps.app.goo.gl/em9J3tQC2wYVCJAs8"
                 className="linka"
               >
-                location link
+                {t("church_link")}
               </a>
             </div>
           </div>
 
           <div className="location_sub">
             <img src={a} alt="" className="ocation_img" />
-            <h2 className="location_name">Quinta da Malaposta </h2>
-
-            <p className="ocation_addres">
-              Largo Virgínio Fiúza Vila Nova de Cerveira,
-              <br />
-              4920-080 Vila Nova de Cerveira, Portugal
-            </p>
+            <h2 className="location_name">{t("quinta_name")}</h2>
+            <p
+              className="ocation_addres"
+              dangerouslySetInnerHTML={{ __html: t("quinta_address") }}
+            />
             <div className="soo">
               <a
                 target="_blank"
                 href="https://maps.app.goo.gl/em9J3tQC2wYVCJAs8"
                 className="linka"
               >
-                location link
+                {t("quinta_link")}
               </a>
             </div>
           </div>

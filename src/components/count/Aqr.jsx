@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./co.css";
 import { useTranslation } from "react-i18next";
 
-const Count = () => {
+const Aqr = () => {
   const { t } = useTranslation("countdown");
 
   const calculateTimeLeft = () => {
@@ -40,31 +40,9 @@ const Count = () => {
       <div className="count_container">
         <h2 className="main_title">{t("mainTitle")}</h2>
         <p className="count_para">{t("description")}</p>
-
-        <div className="count_grid">
-          <div className="count_sub">
-            <h2 className="count_day">{timeLeft.days}</h2>
-            <h3 className="count_value">{t("days")}</h3>
-          </div>
-
-          <div className="count_sub">
-            <h2 className="count_day">{timeLeft.hours}</h2>
-            <h3 className="count_value">{t("hours")}</h3>
-          </div>
-
-          {/* <div className="count_sub">
-            <h2 className="count_day">{timeLeft.minutes}</h2>
-            <h3 className="count_value">{t("minutes")}</h3>
-          </div> */}
-
-          <div className="count_sub">
-            <h2 className="count_day">{timeLeft.seconds}</h2>
-            <h3 className="count_value">{t("seconds")}</h3>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
 
-export default Count;
+export default Aqr;

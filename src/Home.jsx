@@ -8,6 +8,7 @@ import { useLocation } from "react-router-dom";
 import Location from "./components/location/Location";
 import Count from "./components/count/Count";
 import Vheader from "./components/header/Vheader";
+import Aqr from "./components/count/Aqr";
 
 const Home = () => {
   const location = useLocation();
@@ -27,7 +28,7 @@ const Home = () => {
   return (
     <div>
       {/* <Header id="header" /> */}
-      <Vheader/>
+      <Vheader />
       <Intro id="intro" />
       {/* <Detail /> */}
 
@@ -35,8 +36,10 @@ const Home = () => {
       <div id="details">
         <Location />
       </div>
+
+      {/* <Aqr /> */}
       {/* <Parallaxs id="parallax" /> */}
-      <div id="gallery">{/* <Gallery /> */}</div>
+      {/* <div id="gallery"><Gallery /></div> */}
     </div>
   );
 };
