@@ -216,10 +216,13 @@
     padding: 0 20px;
   }
   .travel_title {
-    font-size: 45px;
+    font-size: 65px;
   }
   .travel_title {
-    font-size: 30px;
+    line-height: 90%
+    
+    !important;
+    font-size: 70px;
     margin-bottom: 10px;
   }
 

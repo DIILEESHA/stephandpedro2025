@@ -144,7 +144,7 @@
 .couple_nam {
   font-family: "bic";
   line-height: 100%;
-  text-shadow: 1px 3px  #97a2a5;
+  text-shadow: 1px 3px #97a2a5;
 
   text-align: left;
   font-size: 150px;
@@ -165,12 +165,14 @@
   margin-top: -50px;
   padding: 0 220px;
 }
-.fff{
-    max-width: 1200px;
-    width: 100%;
-    position: relative;
-    display: flex;align-items: center;justify-content: center;
-    min-height: 100vh;
+.fff {
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 .couple_name_section {
   /* border: 1px solid red; */
@@ -222,9 +224,9 @@
     z-index: 99999;
     overflow: hidden;
   }
-.fff{
+  .fff {
     min-height: 100%;
-}
+  }
   .couple_name_section {
     padding: 0;
   }
