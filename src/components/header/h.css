@@ -21,7 +21,8 @@
 .header {
   height: 180vh;
   overflow: hidden;
-  display: flex;flex-direction: column;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 .header_sub {

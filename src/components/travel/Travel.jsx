@@ -147,7 +147,7 @@ const Travel = () => {
                   />
                 </div>
                 <div className="so">
-                  <button type="submit" disabled={loading} className="links de">
+                  <button type="submit" disabled={loading} className="linkaa hoho">
                     {loading ? t("submittingBtn") : t("submitBtn")}
                   </button>
                 </div>
@@ -190,12 +190,17 @@ const Travel = () => {
               link: "https://ap-hotelsresorts.com/hotel/dona-aninhas/",
             },
           ].map((hotel, i) => (
-            <div className="hotel_sub" key={i}>
-              <img src={hotel.img} alt={hotel.name} className="hotel_img" />
-              <h2 className="hotel_name">{hotel.name}</h2>
-              <a href={hotel.link} target="_blank" className="link">
-                {t("hotelWebsite")}
-              </a>
+            <div className="ppp">
+              <div className="hotel_sub" key={i}>
+                <img src={hotel.img} alt={hotel.name} className="hotel_img" />
+                <h2 className="hotel_name">{hotel.name}</h2>
+
+                <div className="linkaa">
+                  <a href={hotel.link} target="_blank" className="dd">
+                    {t("hotelWebsite")}
+                  </a>
+                </div>
+              </div>
             </div>
           ))}
         </div>

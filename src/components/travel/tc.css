@@ -7,7 +7,24 @@
   margin: 0 auto;
   max-width: 1200px;
 }
+.linkaa {
+  /* width: 100%; */
+  margin: 20px 0 0 0;
+  background-color: #1a1a1aec;
+  font-family: "sans";
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 15px 30px !important;
+  position: relative;
 
+  text-align: center;
+}
+
+.dd {
+  text-decoration: underline;
+}
 .tros {
   background-image: url("https://images.pexels.com/photos/10059554/pexels-photo-10059554.jpeg");
   background-size: cover;
@@ -139,12 +156,16 @@
   font-family: "tokyo";
   border: none;
 }
+
+.hoho {
+  cursor: pointer;
+}
 .near_title {
   text-align: center;
   font-family: "bic";
   font-size: 100px;
-  text-shadow: 1px 3px #97a2a5;
-/* line-height: 30%!important; */
+  text-shadow: 1px 1px #97a2a5;
+  /* line-height: 30%!important; */
   color: var(--black);
   font-weight: 500;
   margin-bottom: 30px;
@@ -177,12 +198,18 @@
   object-fit: cover;
 }
 .hotel_name {
-  font-weight: 700;
+  font-weight: 900;
   font-size: 16px;
   margin: 10px 0 -10px 0;
   font-family: "tokyo";
 }
-@media (max-width: 1026px) {
+
+@media (min-width: 1436px) {
+  .hotel_grid {
+    max-width: 1400px;
+  }
+}
+@media (max-width: 1136px) {
   .travel_container {
     display: flex;
     flex-direction: column;
@@ -211,15 +238,15 @@
     height: 30vh;
   }
 
-  .near_title{
+  .near_title {
     font-size: 70px;
-line-height: 80%!important;
-
+    line-height: 80% !important;
   }
   .hotel_grid {
     display: flex;
     flex-direction: column;
     padding: 0 20px;
+    gap: 10px;
   }
   .travel_title {
     font-size: 65px;
@@ -230,7 +257,9 @@ line-height: 80%!important;
     font-size: 70px;
     margin-bottom: 10px;
   }
-
+  .teal {
+    padding: 60px 0 0 0;
+  }
   .trave_sub_title {
     font-size: 16px;
   }

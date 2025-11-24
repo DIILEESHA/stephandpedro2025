@@ -83,7 +83,7 @@
 .intro_title {
   font-family: "tokyo";
   font-family: "bic";
-  text-shadow: 1px 3px  #97a2a5;
+  text-shadow: 1px 1px #97a2a5;
 
   font-weight: 500;
   color: var(--black);
