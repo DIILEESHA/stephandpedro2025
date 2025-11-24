@@ -144,7 +144,7 @@
   font-family: "bic";
   font-size: 100px;
   text-shadow: 1px 3px #97a2a5;
-line-height: 100%;
+/* line-height: 30%!important; */
   color: var(--black);
   font-weight: 500;
   margin-bottom: 30px;
@@ -209,6 +209,12 @@ line-height: 100%;
   }
   .hotel_img {
     height: 30vh;
+  }
+
+  .near_title{
+    font-size: 70px;
+line-height: 80%!important;
+
   }
   .hotel_grid {
     display: flex;
