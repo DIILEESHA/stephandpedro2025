@@ -11,7 +11,8 @@ import parallaxEN from "./src/locales/en/parallax.json";
 import parallaxPT from "./src/locales/pt/parallax.json";
 import travelEN from "./src/locales/en/travel.json";
 import travelPT from "./src/locales/pt/travel.json";
-
+import toEN from "./src/locales/en/to.json";
+import toPT from "./src/locales/pt/to.json";
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
@@ -21,18 +22,21 @@ i18n
         home: homeEN,
         detail: detailEN,
         parallax: parallaxEN,
-        travel: travelEN
+        travel: travelEN,
+        to:toEN,
+
       },
       pt: { 
         home: homePT,
         detail: detailPT,
         parallax: parallaxPT,
-        travel: travelPT
+        travel: travelPT,
+        to:toPT
       },
     },
     lng: "pt",
     fallbackLng: "pt",
-    ns: ["home", "detail", "parallax", "travel"],
+    ns: ["home", "detail", "parallax", "travel","to"],
     defaultNS: "home",
     interpolation: { escapeValue: false },
     detection: { order: ["localStorage", "navigator"], caches: ["localStorage"] },

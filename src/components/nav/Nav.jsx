@@ -178,6 +178,9 @@ const Nav = () => {
           <li onClick={handleDetailsClick}>Details</li>
           <li onClick={() => navigate("/where-to-stay")}>Where to Stay</li>
           <li onClick={gala}>Gallery</li>
+          <li className="">
+            <a href="transport">transport</a>
+          </li>
         </ul>
       </div>
     </>

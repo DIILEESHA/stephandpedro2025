@@ -1,8 +1,8 @@
 import "../header/h.css";
-import headerimg from "../../assets/header1.jpg";
-
-import { motion } from "framer-motion";
 import headerimg3 from "../../assets/views.jpg";
+import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const fadeUps = {
   hidden: { opacity: 0, y: 40 },
@@ -12,15 +12,6 @@ const fadeUps = {
 const fadeDowns = {
   hidden: { opacity: 0, y: -40 },
   visible: { opacity: 1, y: 0, transition: { duration: 1.4, ease: "easeOut" } },
-};
-
-const scaleIn = {
-  hidden: { opacity: 0, scale: 0.9 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 1.6, ease: "easeOut" },
-  },
 };
 
 const leftSlides = {
@@ -39,6 +30,8 @@ const staggerGroups = {
 };
 
 const TravelHeader = () => {
+  const { t } = useTranslation("to"); // Use "travel" namespace
+
   return (
     <motion.div
       className="header"
@@ -48,29 +41,17 @@ const TravelHeader = () => {
       variants={staggerGroups}
     >
       <motion.div className="header_log" variants={fadeDowns}>
-        {/* <motion.div className="circle" variants={scaleIn}>
-          <h2 className="cn">sp</h2>
-        </motion.div> */}
-
         <motion.h2 className="trans" variants={fadeUps}>
-          Transportation Info
+          {t("transportationTitle")}
         </motion.h2>
 
-        <p className="mention_here">
-          🚌 Shuttle bus from the Quinta to the church will be available. 🚗
-          Uber code will be shared soon. Stay tuned!
-        </p>
+        <p className="mention_here">{t("transportationText")}</p>
         <br />
         <div className="dd">
-          <a href="/" className="linkaa">
-            {" "}
-            Back to Home
-          </a>
+          <Link to="/" className="linkaa">
+            {t("backToHome")}
+          </Link>
         </div>
-
-        {/* <motion.h3 className="wedding_date" variants={fadeUps}>
-          August 22, 2026
-        </motion.h3> */}
       </motion.div>
 
       <div className="header_grid">
