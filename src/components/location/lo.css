@@ -3,6 +3,8 @@
   text-align: center;
   font-size: 100px;
   width: 50%;
+  text-shadow: 1px 3px  #97a2a5;
+  /* font-weight: 700; */
   line-height: 100%;
   margin: 10px auto;
   text-transform: capitalize;
@@ -44,27 +46,45 @@
 
 .soo {
   padding: 2px;
-  width: fit-content;
+  /* width:50%; */
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   margin: 0 auto;
-  border: 1px solid #1a1a1a;
 }
 
 .linka {
-  width: fit-content;
+  width: 50%;
   margin: 0px 0;
   background-color: #1a1a1a;
   font-family: "sans";
   color: #fff;
   font-size: 17px;
+  font-weight: bold;
   text-transform: capitalize;
-  padding: 10px 50px;
+  padding: 20px 50px;
+  position: relative;
+}
+
+.linka::after {
+  position: absolute;
+  border: 1px solid #1a1a1a;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: "";
+  width: 100%;
+  height: 100%;
 }
 
 .ocation_addres {
   margin-bottom: 40px;
+}
+
+
+.link{
+  /* width: 100%!important; */
 }
 
 /* MEDIA QUERIES FOR SMALLER DEVICES */
@@ -116,7 +136,7 @@
 /* Mobile (480px and below) */
 @media (max-width: 480px) {
   .cre {
-    font-size: 50px;
+    font-size: 70px;
     width: 90%;
   }
 
@@ -130,8 +150,8 @@
   }
 
   .linka {
-    font-size: 14px;
-    padding: 6px 20px;
+    font-size: 16px;
+    padding: 20px 20px;
   }
 
   .location_title {

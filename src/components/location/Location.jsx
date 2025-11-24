@@ -26,7 +26,7 @@ const Location = () => {
               href="https://maps.app.goo.gl/em9J3tQC2wYVCJAs8"
               className="linka"
             >
-              link
+             location link
             </a>
           </div>
         </div>
@@ -45,7 +45,8 @@ const Location = () => {
               href="https://maps.app.goo.gl/em9J3tQC2wYVCJAs8"
               className="linka"
             >
-              link
+             location link
+              
             </a>
           </div>
         </div>

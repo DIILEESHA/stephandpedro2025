@@ -83,12 +83,21 @@
   .xx {
     display: none;
   }
+.circle{
+  margin-top: 30px;
+}
 
+
+
+.header_img{
+  object-position: 60% center;
+}
   .couple_name {
     width: 80%;
+    margin: 20px 0;
     text-align: center;
-
-    font-size: 50px;
+line-height: 100%;
+    font-size: 100px;
   }
 
   .header {
