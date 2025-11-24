@@ -63,108 +63,110 @@ const Travel = () => {
       <Nav />
       {/* <TravelHeader /> */}
       <div className="tros">
-
-      <motion.div
-        className="travel_container"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={fadeUpVariant}
-      >
         <motion.div
-          className="travels"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.3 }}
+          className="travel_container"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeUpVariant}
         >
-          <h2 className="travel_title">{t("title")}</h2>
-          <div className="trave_sub_title">{t("subtitle")}</div>
-          <p className="travel_desc">{t("description")}</p>
+          <motion.div
+            className="travels"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <h2 className="travel_title">{t("title")}</h2>
+            <div className="trave_sub_title">{t("subtitle")}</div>
+            <p className="travel_desc">{t("description")}</p>
+          </motion.div>
+
+          <motion.div
+            className="travels"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <div className="dcv">
+              <form
+                ref={formRef}
+                className="travel_form"
+                onSubmit={handleSubmit}
+              >
+                <div className="form_input_section">
+                  <label htmlFor="fullName" className="form_label">
+                    {t("fullName")}
+                  </label>
+                  <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    placeholder={t("fullName")}
+                    className="form_input"
+                    required
+                  />
+                </div>
+
+                <div className="form_input_section">
+                  <label className="form_label">{t("country")}</label>
+                  <div className="naugthy">
+                    <CountryDropdown
+                      placeholder={t("countryPlaceholder")}
+                      onChange={setSelectedCountry}
+                      value={selectedCountry ? selectedCountry.alpha3 : ""}
+                    />
+                  </div>
+                </div>
+
+                <div className="form_input_section">
+                  <label htmlFor="specialRequests" className="form_label">
+                    {t("specialRequests")}
+                  </label>
+                  <input
+                    type="text"
+                    id="specialRequests"
+                    name="specialRequests"
+                    placeholder={t("specialRequestsPlaceholder")}
+                    className="form_input"
+                  />
+                </div>
+
+                <div className="form_input_section">
+                  <label htmlFor="email" className="form_label">
+                    {t("email")}
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder={t("emailPlaceholder")}
+                    className="form_input"
+                    required
+                  />
+                </div>
+                <div className="so">
+                  <button type="submit" disabled={loading} className="links de">
+                    {loading ? t("submittingBtn") : t("submitBtn")}
+                  </button>
+                </div>
+
+                <p
+                  className="form_note"
+                  style={{
+                    marginTop: 8,
+                    fontSize: "0.9rem",
+                    color: "#555",
+                    fontStyle: "italic",
+                  }}
+                >
+                  {t("formNote")}
+                </p>
+              </form>
+            </div>
+          </motion.div>
         </motion.div>
-
-        <motion.div
-          className="travels"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          <div className="dcv">
-
-
-          <form ref={formRef} className="travel_form" onSubmit={handleSubmit}>
-            <div className="form_input_section">
-              <label htmlFor="fullName" className="form_label">
-                {t("fullName")}
-              </label>
-              <input
-                type="text"
-                id="fullName"
-                name="fullName"
-                placeholder={t("fullName")}
-                className="form_input"
-                required
-              />
-            </div>
-
-            <div className="form_input_section">
-              <label className="form_label">{t("country")}</label>
-              <CountryDropdown
-                placeholder={t("countryPlaceholder")}
-                onChange={setSelectedCountry}
-                value={selectedCountry ? selectedCountry.alpha3 : ""}
-              />
-            </div>
-
-            <div className="form_input_section">
-              <label htmlFor="specialRequests" className="form_label">
-                {t("specialRequests")}
-              </label>
-              <input
-                type="text"
-                id="specialRequests"
-                name="specialRequests"
-                placeholder={t("specialRequestsPlaceholder")}
-                className="form_input"
-              />
-            </div>
-
-            <div className="form_input_section">
-              <label htmlFor="email" className="form_label">
-                {t("email")}
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder={t("emailPlaceholder")}
-                className="form_input"
-                required
-              />
-            </div>
-<div className="so">
-
-            <button type="submit" disabled={loading} className="links de">
-              {loading ? t("submittingBtn") : t("submitBtn")}
-            </button>
-</div>
-
-            <p
-              className="form_note"
-              style={{
-                marginTop: 8,
-                fontSize: "0.9rem",
-                color: "#555",
-                fontStyle: "italic",
-              }}
-            >
-              {t("formNote")}
-            </p>
-          </form>
-          </div>
-        </motion.div>
-      </motion.div>
       </div>
 
       <div className="teal">

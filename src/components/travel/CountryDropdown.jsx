@@ -20,7 +20,7 @@ const CountryDropdownComponent = (
       (country) => country.emoji && country.status !== "deleted" && country.ioc !== "PRK"
     ),
     onChange,
-    value, // <-- add value prop
+    value,
     defaultValue,
     disabled = false,
     placeholder = "Select a country",
@@ -32,7 +32,6 @@ const CountryDropdownComponent = (
   const [open, setOpen] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState(undefined);
 
-  // Keep selectedCountry in sync with value or defaultValue
   useEffect(() => {
     let countryToSelect = undefined;
     if (value) {
@@ -53,26 +52,29 @@ const CountryDropdownComponent = (
     [onChange]
   );
 
-  const triggerClasses = cn(slim === true && "w-20");
-
   return (
     <Popover open={open} onOpenChange={setOpen}>
-      <PopoverTrigger className="ss" ref={ref} disabled={disabled} {...props}>
+      <PopoverTrigger
+        className="ss border border-white rounded-md px-2 py-1 flex items-center justify-between text-white"
+        ref={ref}
+        disabled={disabled}
+        {...props}
+      >
         {selectedCountry ? (
-          <div className="yt">
+          <div className="yt flex items-center gap-2">
             <div className="inline-flex items-center justify-center w-5 h-5 shrink-0 overflow-hidden rounded-full">
               <CircleFlag countryCode={selectedCountry.alpha2.toLowerCase()} height={20} />
             </div>
             {slim === false && (
-              <span className="overflow-hidden text-ellipsis whitespace-nowrap">
+              <span className="overflow-hidden text-ellipsis whitespace-nowrap text-white">
                 {selectedCountry.name}
               </span>
             )}
           </div>
         ) : (
-          <span>{slim === false ? placeholder : <Globe size={20} />}</span>
+          <span className="text-white">{slim === false ? placeholder : <Globe size={20} />}</span>
         )}
-        <ChevronDown size={16} />
+        <ChevronDown size={16} className="ml-2 text-white" />
       </PopoverTrigger>
 
       <PopoverContent
@@ -84,7 +86,11 @@ const CountryDropdownComponent = (
         <Command className="w-full max-h-[260px] overflow-auto">
           <CommandList>
             <div className="sticky top-0 z-10 bg-white px-4 py-2 border-b border-gray-100">
-              <CommandInput placeholder="Search country..." />
+            <CommandInput
+  placeholder="Search country..."
+  className="bg-red text-[#333] placeholder:text-[#333] w-full px-2 py-1 rounded-md"
+/>
+
             </div>
             <CommandEmpty>
               <p className="px-4 py-6 text-center text-gray-400">No country found.</p>
@@ -94,7 +100,12 @@ const CountryDropdownComponent = (
                 .filter((x) => x.name)
                 .map((option, key) => (
                   <CommandItem className="io" key={key} onSelect={() => handleSelect(option)}>
-                    <CircleFlag countryCode={option.alpha2.toLowerCase()} height={22} width={22} className="rounded-full flex-shrink-0" />
+                    <CircleFlag
+                      countryCode={option.alpha2.toLowerCase()}
+                      height={22}
+                      width={22}
+                      className="rounded-full flex-shrink-0"
+                    />
                     <span className="oo">{option.name}</span>
                     <CheckIcon
                       className={cn(
