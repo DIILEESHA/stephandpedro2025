@@ -119,14 +119,16 @@
 /* Mobile (480px and below) */
 @media (max-width: 480px) {
   .cre {
-    font-size: 40px;
+    font-size: 50px;
     width: 90%;
   }
 
   .location_container {
     padding: 30px;
   }
+.location_title{
 
+}
   .location_name {
     font-size: 18px;
   }
@@ -137,6 +139,7 @@
   }
 
   .location_title {
-    font-size: 18px;
+    font-size: 15px;
+    opacity: 80%;
   }
 }

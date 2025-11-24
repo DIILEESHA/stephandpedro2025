@@ -1,5 +1,5 @@
 import "./intro.css";
-import mo from "../../assets/mobile.jpg";
+import mo from "../../assets/gallery1.jpg";
 
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
@@ -55,7 +55,7 @@ const Intros = () => {
 
             <div className="ppp">
 
-            <img className="hey" src="http://localhost:5173/src/assets/gallery1.jpg" alt="" />
+            <img className="hey" src={mo} alt="" />
             </div>
 
             <motion.h1 className="intro_title" variants={fadeDown}>
