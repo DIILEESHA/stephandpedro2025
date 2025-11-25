@@ -1,0 +1,229 @@
+.vgalery_grid {
+  display: grid;
+  max-width: 900px;
+  background: rgba(31, 31, 31, 0.515);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  margin: 20px auto 0 auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+.vgallery_sub {
+  height: 100%;
+}
+/* ======= Hover Overlay + Zoom Icon ======= */
+.vgallery_sub {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.img_overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.zoom_icon {
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: 0.3s ease;
+}
+
+.vgallery_sub:hover .img_overlay {
+  opacity: 1;
+}
+
+.vgallery_sub:hover .zoom_icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ======= Lightbox ======= */
+.lightbox_container {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+}
+
+.lightbox_content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.lightbox_image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #ffffff60;
+}
+
+.lightbox_close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.vimgs {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  object-position: center center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+.vs {
+  height: 100%;
+  position: relative;
+  padding: 0px 0 50px 0;
+  background-color: #00000090;
+}
+
+.vs::after {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  content: "";
+  width: 100%;
+  background-size: cover;
+  background-size: cover;
+  height: 100%;
+  opacity: 20%;
+  background-image: url("../../assets/heartss.png");
+}
+
+.vgallery {
+  padding-top: 150px;
+
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  /* position: absolute; */
+  /* margin-top: 150px; */
+}
+.vgallery_title {
+  font-family: "bic";
+  color: #fff;
+  font-size: 100px;
+}
+
+.vgallery_para {
+  font-size: 17px;
+  color: #fff;
+  font-family: "play";
+  width: 45%;
+  margin: 10px auto;
+}
+/* ================================
+   📱 Tablet (max-width: 992px)
+   ================================ */
+@media (max-width: 992px) {
+  .vgallery_title {
+    font-size: 70px;
+  }
+
+  .vgallery_para {
+    width: 70%;
+    font-size: 16px;
+  }
+
+  .vgalery_grid {
+    max-width: 700px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ================================
+   📱 Mobile Large (max-width: 768px)
+   ================================ */
+@media (max-width: 768px) {
+  .vgallery {
+    padding-top: 120px;
+  }
+
+  .vgallery_title {
+    font-size: 55px;
+  }
+
+  .vgallery_para {
+    width: 85%;
+    font-size: 15px;
+  }
+
+  .vgalery_grid {
+    max-width: 90%;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+}
+
+/* ================================
+   📱 Mobile Small (max-width: 576px)
+   ================================ */
+@media (max-width: 576px) {
+  .vgallery {
+    padding-top: 100px;
+  }
+  .vs {
+  }
+  .vgallery_title {
+    font-size: 45px;
+  }
+  .vgallery_sub:nth-child(9) {
+    grid-column: 1/3;
+  }
+  .vgallery_para {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .vgalery_grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .vimgs {
+    height: 250px;
+    object-fit: cover;
+  }
+}
+
+/* ================================
+   📱 Extra Small (max-width: 400px)
+   ================================ */
+@media (max-width: 400px) {
+  .vgallery_title {
+    font-size: 38px;
+  }
+
+  .vgallery_para {
+    font-size: 13px;
+  }
+
+  .vimgs {
+    height: 220px;
+  }
+}
