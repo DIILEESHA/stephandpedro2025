@@ -174,11 +174,16 @@ const Nav = () => {
           >
             Home
           </li>
-          <li onClick={handleDetailsClick}>Details</li>
-          <li onClick={() => navigate("/where-to-stay")}>Where to Stay</li>
-          <li onClick={gala}>Gallery</li>
+          <li onClick={handleDetailsClick}> {t("details")}</li>
+          <li onClick={() => navigate("/where-to-stay")}>
+            {" "}
+            {t("whereToStay")}
+          </li>
+          <li>
+            <a href="">{t("gallery")}</a>
+          </li>
           <li className="">
-            <a href="transport">transport</a>
+            <a href="transport">{t("transport")}</a>
           </li>
         </ul>
       </div>
