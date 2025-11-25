@@ -20,6 +20,8 @@ import locationPT from "./src/locales/pt/location.json";
 // NEW
 import galleryEN from "./src/locales/en/gallery.json";
 import galleryPT from "./src/locales/pt/gallery.json";
+import navEN from "./src/locales/en/nav.json";
+import navPT from "./src/locales/pt/nav.json";
 
 i18n
   .use(LanguageDetector)
@@ -34,7 +36,8 @@ i18n
         to: toEN,
         countdown: countdownEN,
         location: locationEN,
-        gallery: galleryEN
+        gallery: galleryEN,
+        nav: navEN
       },
       pt: {
         home: homePT,
@@ -44,12 +47,13 @@ i18n
         to: toPT,
         countdown: countdownPT,
         location: locationPT,
-        gallery: galleryPT
+        gallery: galleryPT,
+        nav: navPT
       }
     },
     lng: "pt",
     fallbackLng: "pt",
-    ns: ["home", "detail", "parallax", "travel", "to", "countdown", "location", "gallery"],
+    ns: ["home", "detail", "parallax", "travel", "to", "countdown", "location", "gallery", 'nav'],
     defaultNS: "home",
     interpolation: { escapeValue: false },
     detection: { order: ["localStorage", "navigator"], caches: ["localStorage"] }

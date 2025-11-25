@@ -14,8 +14,7 @@ import "./n.css";
 const Nav = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { i18n } = useTranslation();
-
+  const { i18n, t } = useTranslation("nav");
   const [currentLang, setCurrentLang] = useState(i18n.language);
   const [open, setOpen] = useState(false);
   const [animateFlags, setAnimateFlags] = useState(false);
@@ -81,19 +80,16 @@ const Nav = () => {
           <div className="another">
             <ul className="nav_ul">
               <li className="nav_li" onClick={handleDetailsClick}>
-                Details
+                {t("details")}
               </li>
               <li className="nav_li" onClick={() => navigate("/where-to-stay")}>
-                Where to Stay
+                {t("whereToStay")}
               </li>
-              <li className="nav_li" >
-                <a href="gallery">
-
-                Gallery
-                </a>
+              <li className="nav_li">
+                <a href="gallery">{t("gallery")}</a>
               </li>{" "}
               <li className="nav_li">
-                <a href="transport">transport</a>
+                <a href="transport">{t("transport")}</a>
               </li>
               {/* 🌍 FLAGS */}
               <li className="nav_li lang_flags">
@@ -182,7 +178,6 @@ const Nav = () => {
           <li onClick={() => navigate("/where-to-stay")}>Where to Stay</li>
           <li onClick={gala}>Gallery</li>
           <li className="">
-
             <a href="transport">transport</a>
           </li>
         </ul>
