@@ -62,6 +62,9 @@
 }
 
 .soo {
+
+  position: relative;
+  z-index: 11;
 }
 
 .ocation_addres {

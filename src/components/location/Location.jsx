@@ -41,7 +41,8 @@ const Location = () => {
             <div className="soo">
               <a
                 target="_blank"
-                href="https://maps.app.goo.gl/em9J3tQC2wYVCJAs8"
+                href=" https://maps.app.goo.gl/3jAfVDeEuYi2kBqs8
+"
                 className="linka"
               >
                 {t("quinta_link")}
