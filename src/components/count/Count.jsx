@@ -5,10 +5,14 @@ import { useTranslation } from "react-i18next";
 const Count = () => {
   const { t } = useTranslation("countdown");
 
+  // Function to get ET time difference
   const calculateTimeLeft = () => {
-    const targetDate = new Date("2026-08-22T00:00:00");
+    // Target date in Eastern Time
+    const targetDateET = new Date(
+      new Date("2026-08-22T00:00:00").toLocaleString("en-US", { timeZone: "America/New_York" })
+    );
     const now = new Date();
-    const difference = targetDate - now;
+    const difference = targetDateET - now;
 
     let timeLeft = {};
 
@@ -32,6 +36,7 @@ const Count = () => {
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
+
     return () => clearInterval(timer);
   }, []);
 
@@ -51,11 +56,6 @@ const Count = () => {
             <h2 className="count_day">{timeLeft.hours}</h2>
             <h3 className="count_value">{t("hours")}</h3>
           </div>
-
-          {/* <div className="count_sub">
-            <h2 className="count_day">{timeLeft.minutes}</h2>
-            <h3 className="count_value">{t("minutes")}</h3>
-          </div> */}
 
           <div className="count_sub">
             <h2 className="count_day">{timeLeft.seconds}</h2>
