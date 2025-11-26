@@ -180,7 +180,7 @@ const Nav = () => {
             {t("whereToStay")}
           </li>
           <li>
-            <a href="">{t("gallery")}</a>
+            <a href="gallery">{t("gallery")}</a>
           </li>
           <li className="">
             <a href="transport">{t("transport")}</a>
