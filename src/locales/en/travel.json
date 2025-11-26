@@ -13,5 +13,7 @@
   "submittingBtn": "Submitting...",
   "formNote": "After submitting, we will review your request and send an approval email.",
   "nearHotels": "Nearby Hotels",
-  "hotelWebsite": "Website Link"
+  "hotelWebsite": "Website Link",
+   "accompanyingGuest": "Accompanying Guest (Full Names)",
+  "accompanyingGuestPlaceholder": "Enter full names of any accompanying guests"
 }

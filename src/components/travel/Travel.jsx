@@ -39,6 +39,7 @@ const Travel = () => {
     setLoading(true);
     const formData = {
       fullName: e.target.fullName.value,
+      accompanyingGuest: e.target.accompanyingGuest.value, // <-- new field
       country: selectedCountry ? selectedCountry.name : "",
       specialRequests: e.target.specialRequests.value,
       email: e.target.email.value,
@@ -108,7 +109,18 @@ const Travel = () => {
                     required
                   />
                 </div>
-
+                <div className="form_input_section">
+                  <label htmlFor="accompanyingGuest" className="form_label">
+                    {t("accompanyingGuest")} {/* Translation key */}
+                  </label>
+                  <input
+                    type="text"
+                    id="accompanyingGuest"
+                    name="accompanyingGuest"
+                    placeholder={t("accompanyingGuestPlaceholder")}
+                    className="form_input"
+                  />
+                </div>
                 <div className="form_input_section">
                   <label className="form_label">{t("country")}</label>
                   <div className="naugthy">

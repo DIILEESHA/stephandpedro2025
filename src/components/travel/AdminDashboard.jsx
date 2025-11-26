@@ -62,6 +62,7 @@ const AdminDashboard = () => {
         ...docItem.data(),
         status: docItem.data().status || "pending",
         emailSent: docItem.data().emailSent || false,
+        accompanyingGuest: docItem.data().accompanyingGuest || "", // <-- new field
       }));
       setRequests(data);
       setLoadingData(false);
@@ -82,6 +83,7 @@ const AdminDashboard = () => {
         ...docItem.data(),
         status: docItem.data().status || "pending",
         emailSent: docItem.data().emailSent || false,
+        accompanyingGuest: docItem.data().accompanyingGuest || "", // <-- new field
       }));
       setRequests(data);
       message.success("Data refreshed");
@@ -180,6 +182,13 @@ const AdminDashboard = () => {
       dataIndex: "fullName",
       key: "fullName",
       responsive: ["xs", "sm"],
+    },
+    {
+      title: "Accompanying Guest",
+      dataIndex: "accompanyingGuest",
+      key: "accompanyingGuest",
+      render: (text) => text || "-",
+      responsive: ["md"], // adjust which screen sizes to show
     },
     {
       title: "Country",
