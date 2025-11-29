@@ -14,6 +14,7 @@
   "formNote": "Após o envio, revisaremos sua solicitação e enviaremos um email de aprovação.",
   "nearHotels": "Hotéis Próximos",
   "hotelWebsite": "Link do Site",
-  "accompanyingGuest": "Convidado Acompanhante (Nomes Completos)",
-  "accompanyingGuestPlaceholder": "Insira os nomes completos de quaisquer convidados acompanhantes"
+
+  "accompanyingGuest": "Acompanhante (Nome Completo)",
+  "accompanyingGuestPlaceholder": "Insira o nome completo do acompanhante"
 }

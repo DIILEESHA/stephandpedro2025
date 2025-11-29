@@ -1,5 +1,5 @@
 import "./intro.css";
-import mo from "../../assets/gallery1.jpg";
+import mo from "../../assets/gallery9.jpg";
 
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";

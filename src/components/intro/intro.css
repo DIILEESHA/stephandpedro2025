@@ -9,6 +9,9 @@
 
 .hey {
   width: 300px;
+  height: 60vh;
+  object-fit: cover;
+  object-position: 80% center;
   border: 1px solid #33333348;
 }
 
@@ -169,6 +172,10 @@
     width: 90%;
     font-size: 17px;
     opacity: 90% !important;
+  }
+
+  .hey{
+    height: 45vh;
   }
   .intro_title {
     margin-bottom: -10px;
